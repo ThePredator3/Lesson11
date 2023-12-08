@@ -1,23 +1,14 @@
 #pragma once
 
-#include "Figure.hpp"
+#include "Rectangle.hpp"
 
-class Square : public Figure
+class Square : public Rectangle
 {
 public:
-    
-    Square(int lenghtSide);
-    
-    void GetArea() override;
-    void GetPerimeter() override;
-    void GetInfo() override;
-    
+
+    Square(int lenghtSide) :
+        Rectangle(lenghtSide, lenghtSide) {};
+
 private:
-//    int m_lenghtSide{1};
-//    int m_area{1};
-//    int m_perimeter{1};
-    
-    void SetArea() override;
-    void SetPerimeter() override;
-    
+
 };

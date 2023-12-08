@@ -1,117 +1,26 @@
 #include <iostream>
-
+#include <numeric>
 #include "Figure.hpp"
 
-Figure::Figure(int lenghtSide)
+Figure::Figure(const std::vector<int>& sides, const std::string& figureName) :
+    m_lenghtSides(sides),
+    m_figureName(figureName)
 {
-    m_lenghtSide = lenghtSide;
+    std::cout << m_figureName << " created!" << std::endl;
 }
 
-void Figure::SetArea()
+
+void Figure::CalculatePerimeter()
 {
-    m_area = m_lenghtSide * m_lenghtSide;
+    m_perimeter = std::accumulate(m_lenghtSides.begin(), m_lenghtSides.end(),
+        decltype(m_lenghtSides)::value_type(0));
 }
 
-void Figure::SetPerimeter()
+void Figure::PrintInfo()
 {
-    m_perimeter = m_lenghtSide * 4;
-}
+    CalculatePerimeter();
+    CalculateArea();
 
-void Figure::GetArea()
-{
-    SetArea();
-    
-    std::cout << "area of the square: " << m_area << std::endl;
+    std::cout << std::endl << "area of the " << m_figureName << ": " << m_area << std::endl;
+    std::cout << "perimeter of the " << m_figureName << ": " << m_perimeter << std::endl << std::endl;
 }
-
-void Figure::GetPerimeter()
-{
-    SetPerimeter();
-    
-    std::cout << "perimeter of the square: " << m_perimeter << std::endl;
-}
-
-void Figure::GetInfo()
-{
-    SetArea();
-    SetPerimeter();
-    
-    std::cout << "area of the square: " << m_area << std::endl;
-    std::cout << "perimeter of the square: " << m_perimeter << std::endl;
-}
-
-//Figure::Figure(int lenghtSideSquare)
-//{
-//    m_lenghtSideSquare = lenghtSideSquare;
-//}
-//
-//Figure::Figure(int lenghtFirstSideTriangle, int lenghtSecondSideTriangle, int lenghtThirdSideTriangle)
-//{
-//    m_lenghtFirstSideTriangle = lenghtFirstSideTriangle;
-//    m_lenghtSecondSideTriangle = lenghtSecondSideTriangle;
-//    m_lenghtThirdSideTriangle = lenghtThirdSideTriangle;
-//}
-//
-//// SQUARE
-//
-//void Figure::SetAreaSquare()
-//{
-//    m_areaSquare = m_lenghtSideSquare * m_lenghtSideSquare;
-//}
-//
-//void Figure::SetPerimeterSquare()
-//{
-//    m_perimeterSquare = m_lenghtSideSquare * 4;
-//}
-//
-//void Figure::GetAreaSquare()
-//{
-//    SetAreaSquare();
-//    std::cout << "area of the square: " << m_areaSquare << std::endl;
-//}
-//
-//void Figure::GetPerimeterSquare()
-//{
-//    SetPerimeterSquare();
-//    std::cout << "perimeter of the square: " << m_perimeterSquare << std::endl;
-//}
-//
-//void Figure::GetInfoSquare()
-//{
-//    SetAreaSquare();
-//    SetPerimeterSquare();
-//    std::cout << "area of the square: " << m_areaSquare << std::endl;
-//    std::cout << "perimeter of the square: " << m_perimeterSquare << std::endl;
-//}
-//
-//// TRIANGLE
-//
-//void Figure::SetAreaTriangle()
-//{
-//    m_areaTriangle = 0;
-//}
-//
-//void Figure::SetPerimeterTriangle()
-//{
-//    m_perimeterTriangle = m_lenghtFirstSideTriangle + m_lenghtSecondSideTriangle + m_lenghtThirdSideTriangle;
-//}
-//
-//void Figure::GetAreaTriangle()
-//{
-//    SetAreaTriangle();
-//    std::cout << "area of the triangle: " << m_areaTriangle << std::endl;
-//}
-//
-//void Figure::GetPerimeterTriangle()
-//{
-//    SetPerimeterTriangle();
-//    std::cout << "perimeter of the triangle: " << m_perimeterTriangle << std::endl;
-//}
-//
-//void Figure::GetInfoTriangle()
-//{
-//    SetAreaTriangle();
-//    SetPerimeterTriangle();
-//    std::cout << "area of the triangle: " << m_areaTriangle << std::endl;
-//    std::cout << "perimeter of the triangle: " << m_perimeterTriangle << std::endl;
-//}

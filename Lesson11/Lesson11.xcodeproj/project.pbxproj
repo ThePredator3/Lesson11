@@ -12,6 +12,7 @@
 		7DD6EB272B191B57008F1BB9 /* FirstTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6EB252B191B57008F1BB9 /* FirstTask.cpp */; };
 		7DD6EB2A2B191C25008F1BB9 /* Figure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6EB282B191C25008F1BB9 /* Figure.cpp */; };
 		7DD6EB2D2B191E6F008F1BB9 /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DD6EB2B2B191E6F008F1BB9 /* Square.cpp */; };
+		7DDC99322B2476C100654A90 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC99312B2476C000654A90 /* Rectangle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		7DD6EB292B191C25008F1BB9 /* Figure.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Figure.hpp; sourceTree = "<group>"; };
 		7DD6EB2B2B191E6F008F1BB9 /* Square.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Square.cpp; sourceTree = "<group>"; };
 		7DD6EB2C2B191E6F008F1BB9 /* Square.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Square.hpp; sourceTree = "<group>"; };
+		7DDC99312B2476C000654A90 /* Rectangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rectangle.cpp; sourceTree = "<group>"; };
+		7DDC99332B2476CC00654A90 /* Rectangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Rectangle.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 			children = (
 				7DD6EB252B191B57008F1BB9 /* FirstTask.cpp */,
 				7DD6EB282B191C25008F1BB9 /* Figure.cpp */,
+				7DDC99312B2476C000654A90 /* Rectangle.cpp */,
 				7DD6EB2B2B191E6F008F1BB9 /* Square.cpp */,
 				7D0F32642B1B1680009FB245 /* Triangle.cpp */,
 			);
@@ -92,6 +96,7 @@
 			children = (
 				7DD6EB262B191B57008F1BB9 /* FirstTask.hpp */,
 				7DD6EB292B191C25008F1BB9 /* Figure.hpp */,
+				7DDC99332B2476CC00654A90 /* Rectangle.hpp */,
 				7DD6EB2C2B191E6F008F1BB9 /* Square.hpp */,
 				7D0F32652B1B1680009FB245 /* Triangle.hpp */,
 			);
@@ -160,6 +165,7 @@
 				7DD6EB2A2B191C25008F1BB9 /* Figure.cpp in Sources */,
 				7D0F32662B1B1680009FB245 /* Triangle.cpp in Sources */,
 				7DD6EB272B191B57008F1BB9 /* FirstTask.cpp in Sources */,
+				7DDC99322B2476C100654A90 /* Rectangle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

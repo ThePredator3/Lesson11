@@ -2,42 +2,29 @@
 
 #include "Triangle.hpp"
 
-Triangle::Triangle(int firstSide, int secondSide, int thirdSide)
+Triangle::Triangle(int firstSide, int secondSide, int thirdSide) :
+    Figure({ firstSide, secondSide, thirdSide }, "Triangle") {}
+
+void Triangle::CalculateArea()
 {
-    m_firstSide = firstSide;
-    m_secondSide = secondSide;
-    m_thirdSide = thirdSide;
+    CalculatePerimeter();
+    auto halfPerimeter = m_perimeter / 2;
+    m_area = sqrt(halfPerimeter *
+        (halfPerimeter - m_lenghtSides[0]) *
+        (halfPerimeter - m_lenghtSides[1]) *
+        (halfPerimeter - m_lenghtSides[2])); // Herons Formula
 }
 
-void Triangle::SetArea()
+bool Triangle::CheckExistence()
 {
-    m_area = 0;
-}
-
-void Triangle::SetPerimeter()
-{
-    m_perimeter = m_firstSide + m_secondSide + m_thirdSide;
-}
-
-void Triangle::GetArea()
-{
-    SetArea();
-    
-    std::cout << "area of the triangle: " << m_area << std::endl;
-}
-
-void Triangle::GetPerimeter()
-{
-    SetPerimeter();
-    
-    std::cout << "perimeter of the triangle: " << m_perimeter << std::endl;
-}
-
-void Triangle::GetInfo()
-{
-    SetArea();
-    SetPerimeter();
-    
-    std::cout << "area of the triangle: " << m_area << std::endl;
-    std::cout << "perimeter of the triangle: " << m_perimeter << std::endl;
+    if (m_lenghtSides[0] + m_lenghtSides[1] > m_lenghtSides[2] &&
+        m_lenghtSides[0] + m_lenghtSides[2] > m_lenghtSides[1] &&
+        m_lenghtSides[1] + m_lenghtSides[2] > m_lenghtSides[0])
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }

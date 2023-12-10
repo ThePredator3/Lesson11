@@ -2,42 +2,30 @@
 
 #include "Square.hpp"
 
-Square::Square(int lenghtSide)
+Square::Square(int lenghtSide) :
+    Rectangle(lenghtSide, lenghtSide, "Square") {};
+
+void Square::CalculateInscribedCircleArea()
 {
-    m_lenghtSide = lenghtSide;
+    m_InscribedCircleArea = 4 * sqrt(m_lenghtSides[0] / 2);
 }
 
-void Square::SetArea()
+void Square::PrintInscribedCircleArea()
 {
-    m_area = m_lenghtSide * m_lenghtSide;
-}
-
-void Square::SetPerimeter()
-{
-    m_perimeter = m_lenghtSide * 4;
-}
-
-void Square::GetArea()
-{
-    SetArea();
+    CalculateInscribedCircleArea();
     
-    std::cout << "area of the square: " << m_area << std::endl;
+    std::cout << "area of the inscribed circle in a " << m_figureName << ": " << m_InscribedCircleArea << std::endl << std::endl;
 }
 
-void Square::GetPerimeter()
-{
-    SetPerimeter();
-    
-    std::cout << "perimeter of the square: " << m_perimeter << std::endl;
-}
-
-void Square::GetInfo()
-{
-    SetArea();
-    SetPerimeter();
-    
-    std::cout << "area of the square: " << m_area << std::endl;
-    std::cout << "perimeter of the square: " << m_perimeter << std::endl;
-}
+//void Square::PrintInfo()
+//{
+//    CalculateArea();
+//    CalculatePerimeter();
+//    CalculateInscribedCircleArea();
+//    
+//    std::cout << std::endl << "area of the " << m_figureName << ": " << m_area << std::endl;
+//    std::cout << "perimeter of the " << m_figureName << ": " << m_perimeter << std::endl;
+//    std::cout << "area of the inscribed circle in a " << m_figureName << ": " << m_InscribedCircleArea << std::endl << std::endl;
+//}
 
 

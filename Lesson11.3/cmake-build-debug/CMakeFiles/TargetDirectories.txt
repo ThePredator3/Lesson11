@@ -1,0 +1,3 @@
+/Volumes/Coding/Projects/ItAcadamy/Lesson11.3/cmake-build-debug/CMakeFiles/Lesson11_3.dir
+/Volumes/Coding/Projects/ItAcadamy/Lesson11.3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Volumes/Coding/Projects/ItAcadamy/Lesson11.3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
